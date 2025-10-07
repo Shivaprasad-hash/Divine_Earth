@@ -1,0 +1,296 @@
+*{
+    box-sizing: border-box;
+}
+
+.nav_cont{
+    background-color: rgba(234, 240, 153, 0.8);
+    height:100px;
+    overflow-y: hidden;
+    z-index:2;
+    position: fixed;
+    top:0;
+    width:100%;
+    justify-content: space-between;
+}
+
+.navbar{
+    width:55%;
+}
+.scrolled{
+    background-color: #e0ed80;
+
+}
+.navbar-brand{
+    padding:0px;
+    margin:0px
+}
+.nav_option{
+    font-size: 19px;
+    color:#263626;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav_btn{
+    border-width:0px;
+    border-radius:5px;
+    padding:5px 15px;
+    font-weight:bold;
+    color:#085944;
+}
+.right_nav i{
+    font-size: 23px;
+    margin-right:15px;
+    cursor: pointer;
+}
+/**Banner sec**/
+
+.banner {
+    position: relative;
+    height: 100vh; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .banner_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2); /* start zoomed in */
+    transition: transform 7s ease, opacity 1s ease; /* zoom + fade */
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .banner_img.active {
+    opacity: 1;
+    transform: scale(1); /* zoom-out */
+  }
+
+  .banner-content {
+    text-align: center;
+    z-index: 1;
+    padding: 0 20px;
+  }
+
+  .banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  .banner-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight:bold;
+  }
+  .banner-content h1{
+    font-weight: bold;
+  }
+  .banner_btn{
+    padding:10px 20px;
+    border-radius: 5px;
+    border:2px solid white;
+    background-color: transparent;
+    color:white;
+    margin:10px;
+    font-weight: bold;
+  }
+  .banner_btn_ind{
+    background-color: #6bf26b;
+    color:#ffffff;
+    font-weight: bold;
+    margin:10px;
+    border-width:0px;
+    height:50px;
+  }
+
+  /*Cause Sec*/
+  .cause_heading{
+    font-weight: bold;
+  }
+  .cause_para{
+    color:#188018;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+.cause_cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+.cards-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 900px; /* Adjust as needed */
+        gap: 10px; /* Space between the cards */
+        height: 500px; /* Fixed height for the component */
+}
+
+        /* Individual card styling */
+.card {
+            /* Flex property is key: flex-grow, flex-shrink, flex-basis */
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+            
+            /* The magic: transition the flex property for a smooth size change */
+    transition: flex 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+        /* Card content overlay */
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    color: white;
+            /* Gradient overlay for text readability */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.card-content h2 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+        /* The paragraph is hidden by default */
+.card-content p {
+    margin: 8px 0 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0;
+    max-height: 0; /* Collapse the paragraph */
+            
+            /* Transition for the paragraph's appearance */
+            /* The delay makes it appear after the card expands */
+    transition: opacity 0.5s ease 0.25s, max-height 0.5s ease 0.25s;
+}
+
+        /* --- HOVER EFFECT --- */
+        
+        /* When hovering over the main container... */
+.cards-container:hover .card:not(:hover) {
+            /* ...shrink the cards that are NOT being hovered to zero */
+    flex: 0;
+}
+
+.card:hover {
+            /* ...expand the card that IS being hovered */
+    flex: 10;
+}
+
+        /* On hover, make the paragraph visible and give it space */
+.card:hover .card-content p {
+    opacity: 1;
+    max-height: 200px; /* Allow the paragraph to expand */
+}
+
+/*choice sec*/
+.choice_cont{
+    display:flex;
+    margin-top:150px;
+    margin-bottom:150px;
+}
+.choice_box_cont1{
+    display:flex;
+    width:50%;
+    background-color: #0b361f;
+}
+.choice_box_cont2{
+    display:flex;
+    width:50%;
+    background-color: #9bc9a0;
+}
+.choice_img_fe{
+    order: 1;
+}
+.choice_img{
+    height:400px;
+}
+.left_part,.right_part{
+    padding:20px 50px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.choice_btn{
+    display: inline;
+}
+.right_part{
+    order: 2;
+}
+.ind_tag{
+    background-color: #9deb98;
+    padding:5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.comp_tag{
+    background-color: #7dbd83;
+    padding:5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.choice_heading_person{
+    color:#ffffff;
+    font-weight: bold;
+}
+.choice_heading{
+    color:#0b361f;
+    font-weight: bold;
+}
+.choice_para_person{
+    color:#ffffff;
+}
+.choice_para{
+    color:#0b361f;
+}
+.ind_btn{
+    background-color: #6bf26b;
+    color:#ffffff;
+    font-weight: bold;
+    margin:10px;
+    border-width:0px;
+    height:50px;
+    border-radius:10px;
+    padding:0px 20px;
+  }
+.compbtn_1{
+    background: transparent;
+    border:2px solid #6bf26b;
+    color:#0b361f;
+    font-weight: bold;
+    margin:10px;
+    height:50px;
+    border-radius:10px;
+    padding:0px 20px;
+}
+.compbtn_2{
+    background-color: #6bf26b;
+    color:#ffffff;
+    font-weight: bold;
+    margin:10px;
+    border-width:0px;
+    height:50px;
+    border-radius:10px;
+    padding:0px 20px;
+}
