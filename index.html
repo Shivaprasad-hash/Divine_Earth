@@ -22,7 +22,7 @@
     
                 <h6 class="nav_option d-inline" id="plantAndGiftBtn">Plant and gift</h6>
                 <h6 class="nav_option d-inline " id="companyBtn">For companies</h6>
-                <h6 class="nav_option d-inline" >About us</h6>
+                <h6 class="nav_option d-inline" id="aboutusBtn">About us</h6>
                 <button class="nav_btn d-inline"><i class="fa-solid fa-seedling plant_icon"></i> Did you receive a gift?</button>
             </nav>
             <div class="right_nav">
@@ -78,7 +78,7 @@
 
         <div class="sec_menu_container d-none" id="companyMenu">
             
-        <!-- LEFT COLUMN -->
+            <!-- LEFT COLUMN -->
             <div class="column">
                 <div class="section-header">START HERE</div>
                     <div class="card-grid">
@@ -144,13 +144,49 @@
                         <div class="featured-desc">
                             Plant trees every month to showcase your impact.
                         </div>
-                        <a class="featured-link" href="#">
+                        
+                    </div>
+                    <a class="featured-link" href="#">
                             Learn more <span class="arrow">&#8250;</span>
                         </a>
-                    </div>
                 </div>
             </div>
         </div>
+
+        <!--third about us menu-->
+
+        <section class="footer-section-abt d-none" id="aboutusMenu">
+            <div class="footer-column">
+                <h3>MISSION</h3>
+                <ul>
+                    <li><a href="#">Manifesto</a></li>
+                    <li><a href="#">Our method</a></li>
+                    <li><a href="#">Countries</a></li>
+                    <li><a href="#">Agroforestry systems</a></li>
+                </ul>
+                </div>
+
+                <div class="footer-column">
+                <h3>THE COMPANY</h3>
+                <ul>
+                    <li><a href="#">Treedom</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Impact report</a></li>
+                    <li><a href="#">Tree register</a></li>
+                </ul>
+                </div>
+
+
+                <div class="footer-column featured">
+                <h3>BLOG</h3>
+                <div class="featured-card">
+                    <div class="featured-text-abt">
+                        <h4>Check out the <br><span>Blog</span></h4>
+                    </div>
+                </div>
+                <a href="#" class="learn-more">Learn more →</a>
+            </div>
+        </section>
 
         <!--banner sec-->
 
@@ -165,7 +201,7 @@
                 <h1 class="text-white banner_heading">Trees are poems that the <br>earth writes upon the sky</h1>
                 <p class="text-white banner_para">We're healing the Earth and uplifting local communities. Join the movement</p>
                 <button class="banner_btn">For companies</button>
-                <button class="banner_btn_ind banner_btn">For Individuals</button>
+                <a href="forIndividuals/indiv.html"> <button class="banner_btn_ind banner_btn">For Individuals</button></a>
             </div>
         </div>
     </header>
@@ -215,7 +251,7 @@
                 <h1 class="choice_heading_person">Are you a person?</h1>
                 <p class="choice_para_person">Every gesture counts. Plant trees from your 
                     smartphone and join our community of pragmatic dreamers.</p>
-                <button class="choice_btn ind_btn">Start here</button>
+                <a href="forIndividuals/indiv.html"><button class="choice_btn ind_btn">Start here</button></a>
             </div>
             <img src="images/cartoon/maleimg.webp" class="choice_img_male choice_img"/>
         </div>
@@ -242,18 +278,18 @@
                 <h1>And after you plant, what happens?</h1>
                 
                 <div class="toggle-buttons">
-                    <button class="btn-toggle active" onclick="setTab('individuals')">For individuals</button>
-                    <button class="btn-toggle" onclick="setTab('companies')">For companies</button>
+                    <button class="btn-toggle active" id="indBtn" onclick="setTab('individuals')">For individuals</button>
+                    <button class="btn-toggle" id="compBtn" onclick="setTab('companies')">For companies</button>
                 </div>
             </div>
         </section>
 
-        <!-- App Showcase Section -->
+        <!-- App Showcase individuals Section -->
     
         <div class="container">
             <div class="phones-container">
-                <!-- Features - Left Top -->
-                <div class="feature feature-left top">
+                <!-- ind Features - Left Top -->
+                <div class="feature feature-left top" id="indLefttop">
                     <div class="feature-content">
                         <div class="feature-icon-left feature-icon order-2">
                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -267,8 +303,23 @@
                     </div>
                 </div>
 
-                <!-- Features - Left Bottom -->
-                <div class="feature feature-left bottom">
+                <!-- comp Features - Left Top -->
+                <div class="feature feature-left top d-none" id="compLefttop">
+                    <div class="feature-content">
+                        <div class="feature-icon-left feature-icon order-2">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.033 3.362C20.043 3.247 21 3.984 21 5c0 9.627-5.373 14-12 14H7.098c.212-3.012 1.15-4.835 3.598-7.001 1.204-1.065 1.102-1.68.509-1.327-4.084 2.43-6.112 5.714-6.202 10.958a.373.373 0 0 1-.373.37h-.626a.97.97 0 0 1-.982-1.004c.043-.974.152-1.88.324-2.728C3.116 16.974 3 15.218 3 13 3 7.477 7.477 3 13 3c1.642 0 3.284.674 6.033.362Z"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text-left feature-text order-1">
+                            <h3>Start your sustainability journey</h3>
+                            <p>With Treedom you do good for the planet and for people.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ind Features - Left Bottom -->
+                <div class="feature feature-left bottom" id="indLeftBottom">
                     <div class="feature-content">
                         <div class="feature-icon-left feature-icon order-2">
                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -282,13 +333,28 @@
                     </div>
                 </div>
 
+                <!-- comp Features - Left Bottom -->
+                <div class="feature feature-left bottom d-none" id="compLeftBottom">
+                    <div class="feature-content">
+                        <div class="feature-icon-left feature-icon order-2">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="m12.5 1 3.258 7.016 7.68.93-5.666 5.267 1.488 7.59-6.76-3.76-6.76 3.76 1.488-7.59-5.665-5.267 7.679-.93L12.5 1Z"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text-left feature-text order-1">
+                            <h3>Reach your business goals</h3>
+                            <p>Trees are valuable allies to achieve your business goals in a sustainable way.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Phone Mockups -->
                 <div class="phone left">
                     <img src="images/mobileimgs/mobileimg.png" alt="Mobile App" class="phone-mockup">
                 </div>
 
-                <!-- Features - Right Top -->
-                <div class="feature feature-right top">
+                <!-- ind Features - Right Top -->
+                <div class="feature feature-right top" id="indRightTop">
                     <div class="feature-content">
                         <div class="feature-icon order-1">
                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -302,8 +368,26 @@
                     </div>
                 </div>
 
-                <!-- Features - Right Bottom -->
-                <div class="feature feature-right bottom">
+                <!-- comp Features - Right Top -->
+                <div class="feature feature-right top d-none" id="compRightTop">
+                    <div class="feature-content">
+                        <div class="feature-icon order-1">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="m18.34 3.244 5.62 5.652v15.835c-.001.298-.119.583-.328.793-.21.21-.493.329-.789.329H4.848a1.12 1.12 0 0 
+                                1-.786-.33 1.134 1.134 0 0 1-.33-.792V4.366c0-.62.5-1.122 1.116-1.122h13.493Zm-5.618 
+                                5.652v11.305h2.247V8.896h-2.247Zm4.495 4.522v6.783h2.247v-6.783h-2.247Zm-8.99 2.26v4.523h2.248v-4.522H8.227Z" />
+                            </svg>
+                        </div>
+                        <div class="feature-text order-2">
+                            <h3>Communicate your commitment</h3>
+                            <p>By planting trees you will have access to communication materials,
+                                 photos and videos with which to communicate your commitment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ind Features - Right Bottom -->
+                <div class="feature feature-right bottom" id="indRightBottom">
                     <div class="feature-content">
                         <div class="feature-icon order-1">
                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -313,6 +397,25 @@
                         <div class="feature-text order-2">
                             <h3>A special gift</h3>
                             <p>Reach anyone, anytime, with a thought that goes straight to the heart.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- comp Features - Right Bottom -->
+                <div class="feature feature-right bottom d-none" id="compRightBottom">
+                    <div class="feature-content">
+                        <div class="feature-icon order-1">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15 2a4 4 0 0 1 3.464 6.001L23 8v2h-2v10a1 1 0 0 1-1 1H4a1 1 0 0
+                                 1-1-1V10H1V8l4.536.001A4 4 0 0 1 12 3.355 3.983 3.983 0 0 1 15 2Zm-2 8h-2v10h2V10ZM9 4a2 2 0 0 0-.15 
+                                3.995L9 8h2V6a2 2 0 0 0-1.697-1.977l-.154-.018L9 4Zm6 0a2 2 0 0 
+                                0-1.995 1.85L13 6v2h2a2 2 0 0 0 1.995-1.85L17 6a2 2 0 0 0-2-2Z"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text order-2">
+                            <h3>Make a sustainable gift</h3>
+                            <p>Customers and employees who receive a tree as a 
+                                gift will start a journey of discovery of the projects we support together.</p>
                         </div>
                     </div>
                 </div>

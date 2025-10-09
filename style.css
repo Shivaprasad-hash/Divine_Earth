@@ -63,6 +63,76 @@
     transform: translateY(10px);
     transition: all 0.25s ease;
 }
+/*---------------------------------------------------------------------------------------------------------*/
+/**about section**/
+
+.footer-section-abt {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 60px 100px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    top: 100px; /* align under navbar */
+    left: 0;
+    right: 0;
+    z-index: 9999; /* ensure it's above the navbar so it receives pointer events */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
+.footer-section-abt:not(.d-none) {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.footer-section-abt h3 {
+  font-size: 14px;
+  color: #0a1a23;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* Lists */
+.footer-section-abt ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section-abt li {
+  margin-bottom: 12px;
+}
+
+.footer-section-abt a {
+  text-decoration: none;
+  color: #0a1a23;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-section-abt a:hover {
+  color: #008037;
+}
+
+.featured-text-abt h4 {
+  font-size: 25px;
+  color: #fff;
+}
+
+.featured-text-abt p {
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.featured-text-abt span {
+  font-weight: bold;
+}
+/*---------------------------------------------------------------------------------------------------------*/
 .footer-section:not(.d-none) {
   opacity: 1;
   visibility: visible;
@@ -127,7 +197,7 @@
 }
 
 .featured-card img {
-  width: 180px;
+  width: 150px;
   border-radius: 10px;
 }
 
@@ -417,6 +487,10 @@
     height:50px;
     border-radius:10px;
     padding:0px 20px;
+    
+  }
+  .ind_btn:hover{
+    text-decoration: none;
   }
 .compbtn_1{
     background: transparent;
@@ -520,12 +594,12 @@
 
         .feature-left {
             left: 40px;
-            text-align: left;
+            text-align: right;
         }
 
         .feature-right {
             right: 40px;
-            text-align: right;
+            text-align: left;
         }
 
         .feature.top {
@@ -1020,7 +1094,7 @@ body {
 
 .sec_menu_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 40px 0 0 40px;
     max-width: 1600px;
     margin: auto;
@@ -1137,7 +1211,8 @@ body {
     background: linear-gradient(180deg, #186c56 0%, rgba(24, 108, 86, 0.8) 55%, rgba(255, 255, 255, 0.0) 100%), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
     border-radius: 18px;
     padding: 32px 32px 55px 32px;
-    min-height: 220px;
+    min-height: 200px;
+    margin-right:80px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

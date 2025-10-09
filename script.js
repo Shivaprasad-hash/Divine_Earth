@@ -18,7 +18,7 @@ window.addEventListener('scroll', function() {
 });
 
 // Toggle button functionality
-        function setTab(tab) {
+        function setTab(tab) { 
             const buttons = document.querySelectorAll('.btn-toggle');
             buttons.forEach(btn => {
                 if (btn.textContent.toLowerCase().includes(tab)) {
@@ -27,7 +27,58 @@ window.addEventListener('scroll', function() {
                     btn.classList.remove('active');
                 }
             });
+            
+
+            compRightBottom.classList.remove('d-none');
+            compRightTop.classList.remove('d-none');
+            compLeftBottom.classList.remove('d-none');
+            compLefttop.classList.remove('d-none');
+
+            indLeftBottom.classList.add('d-none');
+            indLefttop.classList.add('d-none');
+            indRightBottom.classList.add('d-none');
+            indRightTop.classList.add('d-none');
         }
+
+//mobile sec
+
+            const compRightBottom = document.getElementById('compRightBottom');
+            const compRightTop = document.getElementById('compRightTop');
+            const compLeftBottom = document.getElementById('compLeftBottom');
+            const compLefttop = document.getElementById('compLefttop');
+
+            const indRightBottom = document.getElementById('indRightBottom');
+            const indRightTop = document.getElementById('indRightTop');
+            const indLeftBottom = document.getElementById('indLeftBottom');
+            const indLefttop = document.getElementById('indLefttop');
+
+            const indBtn = document.getElementById('indBtn');
+            const compBtn = document.getElementById('compBtn');
+
+            compBtn.addEventListener('click', () => {
+                compRightBottom.classList.remove('d-none');
+                compRightTop.classList.remove('d-none');
+                compLeftBottom.classList.remove('d-none');
+                compLefttop.classList.remove('d-none');
+
+                indLeftBottom.classList.add('d-none');
+                indLefttop.classList.add('d-none');
+                indRightBottom.classList.add('d-none');
+                indRightTop.classList.add('d-none');
+            });
+
+            indBtn.addEventListener('click', () => {
+                compRightBottom.classList.add('d-none');
+                compRightTop.classList.add('d-none');
+                compLeftBottom.classList.add('d-none');
+                compLefttop.classList.add('d-none');
+
+                indLeftBottom.classList.remove('d-none');
+                indLefttop.classList.remove('d-none');
+                indRightBottom.classList.remove('d-none');
+                indRightTop.classList.remove('d-none');
+            });
+
 
 // nav menu: plant and gift
 const plantAndGiftMenu = document.getElementById('plantAndGiftMenu');
@@ -79,7 +130,58 @@ if (plantAndGiftBtn && plantAndGiftMenu) {
   plantAndGiftBtn.addEventListener('mouseleave', onLeave);
   plantAndGiftMenu.addEventListener('mouseleave', onLeave);
 }
+//---------------------------------------------------------------------------------------------------------------
+//about us menu
+const aboutusBtn = document.getElementById('aboutusBtn');
+const aboutusMenu = document.getElementById('aboutusMenu');
 
+// Keep menu positioned right below the navbar to avoid pointer gaps
+const abtnavbar = document.querySelector('.nav_cont');
+function abtupdateMenuTop() {
+  if (abtnavbar && aboutusMenu) {
+    const h = abtnavbar.offsetHeight || 100;
+    aboutusMenu.style.top = h + 'px';
+  }
+}
+abtupdateMenuTop();
+window.addEventListener('resize', abtupdateMenuTop);
+
+// show/hide with hover flag + small delay to tolerate tiny gaps
+let abthoverTimer = null;
+let abtisHovering = false;
+function showMenuAbt() {
+  aboutusMenu.classList.remove('d-none');
+}
+function hideMenuNowAbt() {
+  aboutusMenu.classList.add('d-none');
+}
+
+function onEnterAbt() {
+  abtisHovering = true;
+  if (abthoverTimer) {
+    clearTimeout(abthoverTimer);
+    abthoverTimer = null;
+  }
+  showMenuAbt();
+}
+
+function onLeaveAbt() {
+  abtisHovering = false;
+  if (abthoverTimer) clearTimeout(abthoverTimer);
+  // small delay to allow moving between button and menu
+  abthoverTimer = setTimeout(() => {
+    if (!abtisHovering) hideMenuNowAbt();
+  }, 120);
+}
+
+// Use mouseenter/mouseleave to avoid event bubbling complexities
+if (aboutusBtn && aboutusMenu) {
+  aboutusBtn.addEventListener('mouseenter', onEnterAbt);
+  aboutusMenu.addEventListener('mouseenter', onEnterAbt);
+  aboutusBtn.addEventListener('mouseleave', onLeaveAbt);
+  aboutusMenu.addEventListener('mouseleave', onLeaveAbt);
+}
+//----------------------------------------------------------------------------------------------------------------
 // company menu
 const companyMenu = document.getElementById('companyMenu');
 const companyBtn = document.getElementById('companyBtn'); 
@@ -130,3 +232,7 @@ if (companyBtn && companyMenu) {
   companyBtn.addEventListener('mouseleave', onLeaveComp);
   companyMenu.addEventListener('mouseleave', onLeaveComp);
 }
+
+
+
+

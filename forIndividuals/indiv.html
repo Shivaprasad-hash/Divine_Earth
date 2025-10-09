@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant a Tree with one click with Adoptrees</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ffe7aa65d3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="indiv.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> </head>
+<body>
+
+    <header class="header">
+        <div class="nav_cont d-flex align-items-center">
+            <nav class="navbar p-2 d-flex justify-content-space-around">
+                <a class="navbar-brand pt-4 pb-4" href="../index.html">
+                    <img src="../images/logo/logo.png" width="150" height="150" class="logo_img m-0" />
+                </a>
+    
+                <h6 class="nav_option d-inline" id="plantAndGiftBtn">Plant and gift</h6>
+                <h6 class="nav_option d-inline " id="companyBtn">For companies</h6>
+                <h6 class="nav_option d-inline" id="aboutusBtn">About us</h6>
+                <button class="nav_btn d-inline"><i class="fa-solid fa-seedling plant_icon"></i> Did you receive a gift?</button>
+            </nav>
+            <div class="right_nav">
+                <i class="fa-regular fa-user"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+
+        <!-- menu cards-->
+
+        <section class="footer-section d-none" id="plantAndGiftMenu">
+            <div class="footer-column">
+                <h3>PLANT</h3>
+                <ul>
+                    <li><a href="#">Plant a tree</a></li>
+                    <li><a href="#">Activate a subscription</a></li>
+                    <li><a href="#">Create a Forest</a></li>
+                </ul>
+                </div>
+
+                <div class="footer-column">
+                <h3>GIVE THE GIFT</h3>
+                <ul>
+                    <li><a href="#">Give a tree as a gift</a></li>
+                    <li><a href="#">How to gift</a></li>
+                </ul>
+                </div>
+
+                <div class="footer-column">
+                <h3>FOR COMPANIES</h3>
+                <ul>
+                    <li><a href="#">Plant trees</a></li>
+                    <li><a href="#">Choose a subscription</a></li>
+                    <li><a href="#">Giftideas</a></li>
+                </ul>
+                </div>
+
+                <div class="footer-column featured">
+                <h3>FEATURED</h3>
+                <div class="featured-card">
+                    <img src="https://www.treedom.net/images/coffee-example.webp" alt="Featured Image">
+                    <div class="featured-text">
+                        <h4>From your tree<br>to your <span>moka</span></h4>
+                        <p>Plant a coffee tree: the coffee is yours and you cultivate a job opportunity for women in <strong>Guatemala</strong>.</p>
+                        <a href="#" class="learn-more">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--sec menu card-->
+
+        <div class="sec_menu_container d-none" id="companyMenu">
+            
+            <!-- LEFT COLUMN -->
+            <div class="column">
+                <div class="section-header">START HERE</div>
+                    <div class="card-grid">
+                        <div class="fir-cards">
+                            <!-- Card 1 -->
+                            <div class="company_sec_card">
+                                <div>
+                                    <div class="card-heading">Treedom for businesses</div>
+                                    <div>Grow your engagement with sustainable and communicable projects.</div>
+                                </div>
+                                
+                                <span class="arrow">&#8250;</span>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="company_sec_card">
+                                <div>
+                                    <div class="card-heading">Case studies</div>
+                                    <div>Learn how other companies have generated positive impact through Treedom.</div>
+                                </div>
+                                
+                                <span class="arrow">&#8250;</span>
+                            </div>
+                        </div>
+                        <div class="sec-cards">
+                            <!-- Card 3 -->
+                            <div class="company_sec_card">
+                                <div>
+                                    <div class="card-heading">Your needs</div>
+                                    <div>Enhance every area of your business with positive impact projects.</div>
+                                </div>
+                                
+                                <span class="arrow">&#8250;</span>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="company_sec_card">
+                                <div>
+                                    <div class="card-heading">Contact us</div>
+                                    <div>Contact us and together we will find the tailor-made solution best suited to your companies’ needs.</div>
+                                </div>
+                                 
+                                <span class="arrow">&#8250;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CENTER COLUMN -->
+                <div class="column">
+                    <div class="services-header">OUR SERVICES</div>
+                    <ul class="services-list">
+                        <li>Business profile</li>
+                        <li>Corporate gifts</li>
+                        <li>E-commerce</li>
+                        <li>Communication kit</li>
+                        <li>Training</li>
+                        <li>CO<sub>2</sub> Calculator</li>
+                    </ul>
+                </div>
+                <!-- RIGHT COLUMN -->
+                <div class="column">
+                    <div class="featured-header">FEATURED</div>
+                    <div class="featured-card">
+                        <div class="featured-title">Your company,<br><span class="featured-green">your forest.</span></div>
+                        <div class="featured-desc">
+                            Plant trees every month to showcase your impact.
+                        </div>
+                        
+                    </div>
+                    <a class="featured-link" href="#">
+                            Learn more <span class="arrow">&#8250;</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+
+        <!--third about us menu-->
+
+        <section class="footer-section-abt d-none" id="aboutusMenu">
+            <div class="footer-column">
+                <h3>MISSION</h3>
+                <ul>
+                    <li><a href="#">Manifesto</a></li>
+                    <li><a href="#">Our method</a></li>
+                    <li><a href="#">Countries</a></li>
+                    <li><a href="#">Agroforestry systems</a></li>
+                </ul>
+                </div>
+
+                <div class="footer-column">
+                <h3>THE COMPANY</h3>
+                <ul>
+                    <li><a href="#">Treedom</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Impact report</a></li>
+                    <li><a href="#">Tree register</a></li>
+                </ul>
+                </div>
+
+
+                <div class="footer-column featured">
+                <h3>BLOG</h3>
+                <div class="featured-card">
+                    <div class="featured-text-abt">
+                        <h4>Check out the <br><span>Blog</span></h4>
+                    </div>
+                </div>
+                <a href="#" class="learn-more">Learn more →</a>
+            </div>
+        </section>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Plant and give away trees</h1>
+                <p>A gift for the planet, a gift for you</p>
+                <button class="btn btn-secondary">Discover how our trees work</button>
+            </div>
+        </section>
+
+        <section class="impact">
+            <div class="container">
+                <h2 class="impact_heading">Support an impact that grows over time, with you</h2>
+                <p class="heading_para">Choose the mission that reflects you and support it over time. 
+                    Every month, your contribution helps build real and lasting change.</p>
+                <section class="impact">
+                    <div class="container">
+                        <div class="carousel">
+                            <button class="carousel-btn prev" aria-label="Previous Slide">&lt;</button>
+                            <div class="carousel-viewport">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide">
+                                        <div class="impact-card">
+                                            <span>🌍</span>
+                                            <h3>Support the climate</h3>
+                                            <p>Every tree absorbs CO₂</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <div class="impact-card">
+                                            <span>🤝</span>
+                                            <h3>Support local communities</h3>
+                                            <p>Farmers receive training and support</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-slide">
+                                         <div class="impact-card">
+                                            <span>🌳</span>
+                                            <h3>Support the planet</h3>
+                                            <p>Help protect biodiversity</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-btn next" aria-label="Next Slide">&gt;</button>
+                        </div>
+                
+                        <div class="carousel-nav">
+                            <button class="carousel-indicator current-slide"></button>
+                            <button class="carousel-indicator"></button>
+                            <button class="carousel-indicator"></button>
+                        </div>
+                
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="trees-section">
+            <div class="container">
+                <div class="trees-grid">
+                    <div class="tree-card">
+                        <div class="card-badge bestseller">Best Seller</div>
+                        <div class="card_img_desc">
+                            <img src="../images/indivimgs/coca.jpg" alt="Cacao Tree" class="tree-image">
+                            <div class="tree-info">
+                                <h3>Cacao</h3>
+                                <p class="tree-benefit">Food & Income</p>
+                                <div class="tree-location">
+                                    🇨🇲 Cameroon
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tree-purchase">
+                            <span class="tree-price">€ 24.90</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="tree-card">
+                        <div class="card-badge blue">Top Gifter</div>
+                        <div class="card_img_desc">
+                            <img src="../images/indivimgs/treeoflife.jpg" alt="Tree of Life" class="tree-image">
+                            <div class="tree-info">
+                                <h3>Tree of Life</h3>
+                                <p class="tree-benefit">Environmental Protection</p>
+                                <div class="tree-location">
+                                    🇮🇹 Italy
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tree-purchase">
+                            <span class="tree-price">€ 49.90</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tree-card">
+                        <div class="card-badge sale">-15%</div>
+                        <div class="card_img_desc">
+                            <img src="../images/indivimgs/cherry.jpg" alt="African Cherry" class="tree-image">
+                            <div class="tree-info">
+                                <h3>African Cherry</h3>
+                                <p class="tree-benefit">Food & Income</p>
+                                <div class="tree-location">
+                                    🇰🇪 Kenya
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tree-purchase">
+                            <span class="tree-price">€ 17.90</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="tree-card">
+                        <div class="card_img_desc">
+                            <img src="../images/indivimgs/coffee.jpg" alt="Coffee" class="tree-image">
+                            <div class="tree-info">
+                                <h3>Coffee</h3>
+                                <p class="tree-benefit">Food & Income</p>
+                                <div class="tree-location">
+                                    🇪🇨 Ecuador
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tree-purchase">
+                            <span class="tree-price">€ 14.90</span>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+
+                    </div>
+                <button class="btn btn-outline">Show all</button>
+            </div>
+        </section>
+        
+        <section class="how-it-works">
+             <div class="container">
+                <h2 class="howitworksheading">Choose, Buy, Personalize, Give. It's that easy!</h2>
+                 <div class="steps">
+                     <div class="step">
+                         <div class="step-number">1</div>
+                         <div class="step-content">
+                             <h3>Choose the tree</h3>
+                             <p>Each tree has its own meaning and benefits. Choose the one that's right for you!</p>
+                         </div>
+                     </div>
+                     <div class="step">
+                         <div class="step-number">2</div>
+                         <div class="step-content">
+                             <h3>Personalize your gift</h3>
+                             <p>Write a message, choose how to send it, and schedule delivery. It's a thoughtful gift that lasts.</p>
+                         </div>
+                     </div>
+                     <div class="step">
+                         <div class="step-number">3</div>
+                         <div class="step-content">
+                             <h3>Give the tree</h3>
+                             <p>A farmer will plant your tree and you can follow its story online, in its Diary.</p>
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+        <section class="why-treedom">
+            <div class="container">
+                <h2 class="whytreedomheading">Why a tree, why Adoptrees?</h2>
+                <div class="why-cards">
+                    <div class="why-card">
+                        <h3>A GIFT THAT LASTS</h3>
+                        <p>Give a tree to someone you love, and they'll see it grow online. It is a special gift that shows you care about them and the planet.</p>
+                    </div>
+                    <div class="why-card">
+                        <h3>ADOPTREES IS FAMOUS THROUGH WORD OF MOUTH</h3>
+                        <p>We believe in transparency, which is why we invest in planting trees and telling their stories, not in big advertising campaigns.</p>
+                    </div>
+                    <div class="why-card">
+                        <h3>JOIN THE COMMUNITY ON SOCIAL MEDIA</h3>
+                        <p>Share photos and stories of your trees. Join a community of people who, like you, want to make the planet greener.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col about">
+                    <img src="../images/logo/logo.png" alt="Adoptrees Logo">
+                    <div class="social-icons">
+                        <span>FB</span> <span>IN</span> <span>TW</span> <span>LI</span>
+                    </div>
+                </div>
+                <div class="footer-col links">
+                    <h4>Our trees</h4>
+                    <ul>
+                        <li><a href="#">Plant a tree</a></li>
+                        <li><a href="#">Give a tree</a></li>
+                        <li><a href="#">Meanings of the trees</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col links">
+                    <h4>Learn more</h4>
+                    <ul>
+                        <li><a href="#">The Adoptrees project</a></li>
+                        <li><a href="#">Our philosophy</a></li>
+                        <li><a href="#">Our projects</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-col links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Privacy and Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                 <span>Visa</span> <span>MC</span> <span>Amex</span> <span>PayPal</span>
+            </div>
+        </div>
+    </footer>
+    <script src="indiv.js"></script>
+  </body>
+</html>
